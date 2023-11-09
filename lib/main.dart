@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -9,71 +11,149 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData.light(useMaterial3: true),
-      home: const SimpleProject(),
+    return const MaterialApp(
+      home: FacebookApp(),
     );
   }
 }
 
-class SimpleProject extends StatelessWidget {
-  const SimpleProject({super.key});
+class FacebookApp extends StatelessWidget {
+  const FacebookApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        // elevation: 1,
-        title: const Text('Facebook'),
-        centerTitle: true,
-        leading: IconButton(
-          onPressed: () {},
-          icon: const Icon(
-            Icons.menu,
-            size: 22,
-          ),
-        ),
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(
-              Icons.search,
-              size: 33,
+        appBar: AppBar(
+          title: Text("facebook",
+              style: TextStyle(
+                  color: Colors.blueAccent,
+                  fontSize: 27,
+                  fontWeight: FontWeight.w700)),
+          centerTitle: true,
+          leading: IconButton(
+            icon: Icon(
+              Icons.menu,
+              color: Colors.blueAccent,
+              size: 30,
             ),
-          ),
-          IconButton(
             onPressed: () {},
-            icon: const Icon(
-              Icons.message,
-              size: 33,
-            ),
           ),
-        ],
-      ),
-      body: const Center(
-        child: Text(
-          'Hello Noah iouh dfpdojf erplüplvf dfopdkrfke pejrt erpjgerg etrjgpeogbtg',
-          style: TextStyle(
-              fontSize: 28,
-              // backgroundColor: Colors.amber,
-              // color: Colors.blue,
-              // decoration: TextDecoration.lineThrough,
-              // fontStyle: FontStyle.italic
-              fontWeight: FontWeight.w500,
-              height: 3,
-              letterSpacing: 5),
-          maxLines: 2,
-          overflow: TextOverflow.fade,
-          textAlign: TextAlign.center,
-          textDirection: TextDirection.ltr,
+          actions: [
+            IconButton(
+                icon: Icon(
+                  Icons.message,
+                  color: Colors.blueAccent,
+                  size: 30,
+                ),
+                onPressed: () {}),
+            IconButton(
+              icon: Icon(
+                Icons.search,
+                color: Colors.blueAccent,
+                size: 30,
+              ),
+              onPressed: () {},
+            ),
+          ],
+          backgroundColor: Colors.white,
+          elevation: 20,
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        // backgroundColor: Colors.black,
-        child: const Icon(Icons.add),
-      ),
-    );
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              Container(
+                margin: EdgeInsets.only(bottom: 22),
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(15),
+                  color: Colors.blueGrey,
+                ),
+                height: 322,
+                width: double.infinity,
+                child: Text(
+                  "Hello",
+                  style: TextStyle(color: Colors.white, fontSize: 44),
+                ),
+              ),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    Container(
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        color: Colors.blueGrey,
+                      ),
+                      height: 100,
+                      width: 150,
+                      child: Text(
+                        "Welcome",
+                        style: TextStyle(color: Colors.white, fontSize: 27),
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.symmetric(horizontal: 23),
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        color: Colors.blueGrey,
+                      ),
+                      height: 100,
+                      width: 150,
+                      child: Text(
+                        "Noah",
+                        style: TextStyle(color: Colors.white, fontSize: 27),
+                      ),
+                    ),
+                    Container(
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        color: Colors.blueGrey,
+                      ),
+                      height: 100,
+                      width: 150,
+                      child: Text(
+                        "Hi",
+                        style: TextStyle(color: Colors.white, fontSize: 27),
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(left: 11),
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        color: Colors.blueGrey,
+                      ),
+                      height: 100,
+                      width: 150,
+                      child: Text(
+                        "Obaida",
+                        style: TextStyle(color: Colors.white, fontSize: 27),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.only(top: 20),
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(15),
+                  color: Colors.blueGrey,
+                ),
+                height: 322,
+                width: double.infinity,
+                child: Text(
+                  "Noah...",
+                  style: TextStyle(color: Colors.white, fontSize: 44),
+                ),
+              )
+            ],
+          ),
+        ));
   }
 }
+// mainAxisAlignment → MainAxisAlignment.
+// crossAxisAlignment → CrossAxisAlignment.
