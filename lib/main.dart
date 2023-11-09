@@ -24,7 +24,7 @@ class SimpleProject extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        elevation: 5,
+        // elevation: 1,
         title: const Text('Facebook'),
         centerTitle: true,
         leading: IconButton(
@@ -53,9 +53,26 @@ class SimpleProject extends StatelessWidget {
       ),
       body: const Center(
         child: Text(
-          'Hello Noah',
-          style: TextStyle(fontSize: 40),
+          'Hello Noah iouh dfpdojf erplüplvf dfopdkrfke pejrt erpjgerg etrjgpeogbtg',
+          style: TextStyle(
+              fontSize: 28,
+              // backgroundColor: Colors.amber,
+              // color: Colors.blue,
+              // decoration: TextDecoration.lineThrough,
+              // fontStyle: FontStyle.italic
+              fontWeight: FontWeight.w500,
+              height: 3,
+              letterSpacing: 5),
+          maxLines: 2,
+          overflow: TextOverflow.fade,
+          textAlign: TextAlign.center,
+          textDirection: TextDirection.ltr,
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        // backgroundColor: Colors.black,
+        child: const Icon(Icons.add),
       ),
     );
   }
